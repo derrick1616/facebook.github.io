@@ -1,351 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            background-image: url(swithe.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-
-        }
-        .container {
-            width: 85%;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container h2 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 10px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input[type="email"],
-        .form-group input[type="password"],
-        .form-group input[type="tel"],
-        .form-group input[type="text"],
-        .form-group input[type="checkbox"],
-        .form-group input[type="radio"],
-        .form-group button,
-        .form-group select {
-            width: calc(100% - 20px);
-            padding: 8px;
-            border-radius: 3px;
-            box-sizing: border-box;
-        }
-
-        .form-group input[type="checkbox"] {
-            display: inline-block;
-            width: auto;
-            vertical-align: middle;
-        }
-
-        .form-group label.checkbox-label {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-
-        .form-group button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Adjust radio button styling */
-        .form-group input[type="radio"] {
-            width: auto;
-            margin-right: 5px; /* Adjust spacing between radio button and text */
-            vertical-align: middle;
-        }
-
-        .form-group label.radio-label {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        /* Terms and conditions */
-        .terms {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 14px;
-            color: #888;
-        }
-
-        .terms a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .terms a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0; /* Reduced height */
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .footer-section {
-            flex: 1 1 300px;
-            margin-bottom: 20px;
-        }
-
-        .footer-section h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #fff;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 5px;
-        }
-
-        .footer-section ul {
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 5px;
-        }
-
-        .footer-section ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section ul li a:hover {
-            color: #fff;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            color: #ccc;
-        }
-
-        .social-media {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .social-media ul {
-            padding: 0;
-            list-style-type: none;
-            margin: 0;
-        }
-
-        .social-media ul li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        .social-media ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-media ul li a:hover {
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #dddfe2;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1877f2;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #166fe5;
+    }
+    .form-group .signup-link {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .form-group .signup-link a {
+      color: #1877f2;
+      text-decoration: none;
+    }
+    .form-group .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<img src="swithe.png", alt="swithe">
-<div class="container">
-    <h2>Sign Up</h2>
-
-    <form action="/submit_login" method="post">
-        <!-- First Name -->
-        <div class="form-group">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
-        </div>
-
-        <!-- Last Name -->
-        <div class="form-group">
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-        </div>
-
-        <!-- Email -->
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <!-- Password -->
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-
-        <!-- Phone -->
-        <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        </div>
-
-        <!-- State -->
-        <div class="form-group">
-            <label for="state">State:</label>
-            <select id="state" name="state" required>
-                <option value="" disabled selected>Select your state</option>
-                <option value="AB">Abuja</option>
-                <option value="AD">Adamawa</option>
-                <option value="AK">Akwa Ibom</option>
-                <option value="AN">Anambra</option>
-                <option value="BA">Bauchi</option>
-                <option value="BY">Bayelsa</option>
-                <option value="BE">Benue</option>
-                <option value="BO">Borno</option>
-                <option value="CR">Cross River</option>
-                <option value="DE">Delta</option>
-                <option value="EB">Ebonyi</option>
-                <option value="ED">Edo</option>
-                <option value="EK">Ekiti</option>
-                <option value="EN">Enugu</option>
-                <option value="GO">Gombe</option>
-                <option value="IM">Imo</option>
-                <option value="JI">Jigawa</option>
-                <option value="KD">Kaduna</option>
-                <option value="KN">Kano</option>
-                <option value="KT">Katsina</option>
-                <option value="KE">Kebbi</option>
-                <option value="KO">Kogi</option>
-                <option value="KW">Kwara</option>
-                <option value="LA">Lagos</option>
-                <option value="NA">Nasarawa</option>
-                <option value="NI">Niger</option>
-                <option value="OG">Ogun</option>
-                <option value="ON">Ondo</option>
-                <option value="OS">Osun</option>
-                <option value="OY">Oyo</option>
-                <option value="PL">Plateau</option>
-                <option value="RI">Rivers</option>
-                <option value="SO">Sokoto</option>
-                <option value="TA">Taraba</option>
-                <option value="YO">Yobe</option>
-                <option value="ZA">Zamfara</option>
-            </select>
-        </div>
-
-        <!-- Country -->
-        <div class="form-group">
-            <label for="country">Country:</label>
-            <select id="country" name="country" required>
-                <option value="" disabled selected>Select your country</option>
-                <option value="NGA">Nigeria</option>
-                <!-- Add more country options as needed -->
-            </select>
-        </div>
-
-        <!-- Gender -->
-        <div class="form-group">
-            <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male" class="radio-label">Male</label>
-
-            <input type="radio" id="female" name="gender" value="female" required>
-            <label for="female" class="radio-label">Female</label>
-        </div>
-
-        <!-- Terms and conditions -->
-        <div class="form-group">
-            <input type="checkbox" id="agree" name="agree" required>
-            <label for="agree" class="checkbox-label">I agree to the terms and conditions</label>
-        </div>
-
-        <!-- Submit button -->
-        <div class="form-group">
-            <button type="submit">Submit</button>
-        </div>
+  <div class="container">
+    <img src="facebook_logo.png" alt="Facebook Logo" style="display: block; margin: 0 auto; width: 100px; margin-bottom: 20px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Log into Facebook</h2>
+    <form action="login.php" method="POST">
+      <div class="form-group">
+        <label for="email">Email or Phone</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Log In</button>
+      </div>
     </form>
-
-    <!-- Terms and conditions -->
-    <div class="terms">
-        By clicking Submit, you agree to our <a href="#">Terms and Conditions</a>.
+    <div class="form-group signup-link">
+      <a href="register.html">Create New Account</a> | <a href="#">Forgot Password?</a>
     </div>
-</div>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <ul>
-                <li><a href="mailto:example@email.com">Email</a></li>
-                <li><a href="tel:+123456789">Phone</a></li>
-                <li><a href="#">Address</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Explore</h3>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Legal</h3>
-            <ul>
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-                <li><a href="/terms-of-service">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div class="footer-section social-media">
-            <h3>Follow Us</h3>
-            <ul>
-                <li><a href="https://www.facebook.com/example" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/example" target="_blank">Twitter</a></li>
-                <li><a href="https://www.instagram.com/example" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/company/example" target="_blank">LinkedIn</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </div>
-</footer>
-
+  </div>
 </body>
 </html>
